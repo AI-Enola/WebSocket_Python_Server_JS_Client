@@ -3,7 +3,7 @@ This is an example to get user actions to control GPIO via webpage using Javascr
 
 In "client.js" file : 
 
-Line 13 - // NOTE : THIS SOCKET IS SET TO WORK WITH SSL USING WSS - IF NOT USING SSL THEN REPLACE WSS (WebSocket Secure) FOR WS (WebSocket)
+Line 13 - // NOTE : THIS SOCKET IS SET TO WORK WITH SSL USING WSS - IF NOT USING SSL THEN REPLACE WSS (WebSocket Secure) FOR WS (WebSocket) - IP and Port to match SERVER_INFO in server.py file.
 
     Using SSL : const SOCKET = new WebSocket('wss://192.168.2.20:60004');
     
