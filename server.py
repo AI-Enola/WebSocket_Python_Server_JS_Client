@@ -152,7 +152,7 @@ class WebsocketServer:
         
     
     
-    async def send_to_client(self, data_out=str):
+    async def send_to_client(self, data_out=str) -> None:
         """
         Send data to client via websocket
         Parameters : self, data_out as str for client
