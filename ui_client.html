@@ -1,0 +1,56 @@
+<!-- 
+Title : HTML UI
+Description : HTML File - UI to control GPIO in remote
+Version : 1 - Public - Django Version
+Date : 2022-02-05
+
+NOTE : This is an example to send user actions to control GPIO via webpage using Javascript. - FROM AN DJANGO PROJECT HTML FILE
+
+-->
+{% extends 'site/base.html' %}
+
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %} {% translate "Home - Vortex" %}{% endblock title %}
+{% block content %}
+
+<!-- HOME - Begin Page Content - 2022-01-11 -->
+<div class="section-header container-fluid py-3 pt-5 text-center" style="height: 1200px;">
+
+	<!-- SECTION - Introduction -->
+	<div class="container-fuild pt-4 pb-5">
+
+		<!-- TITLE -->
+		<h2 class="typo-size-title" style="letter-spacing: 8px;">RC CAR</h2>
+		<h3>{% translate "Control Panel" %}</h3>
+
+        <!-- JS AREA -->
+		<p id="status" class="mb-5"></p>
+
+
+		<button id="drive_mode_eco" onclick="send_command(this.id)">Eco</button>
+		<button id="drive_mode_sport" onclick="send_command(this.id)">Sport</button>
+		<button id="drive_mode_typer" onclick="send_command(this.id)">Type R</button>
+
+		<button id="motor_forward" onclick="send_command(this.id)">Forward</button>
+		<button id="motor_backward" onclick="send_command(this.id)">Backward</button>
+
+		<button id="front_wheels_direction_right" onclick="send_command(this.id)">Right</button>
+		<button id="front_wheels_direction_left" onclick="send_command(this.id)">Left</button>
+
+        <!-- JS AREA END -->
+
+		
+	</div>
+
+</div>
+
+
+
+{% endblock content %}
+
+{% block additional_scripts %}
+
+{% endblock additional_scripts %}
